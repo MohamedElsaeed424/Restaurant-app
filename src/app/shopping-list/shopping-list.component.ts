@@ -10,5 +10,9 @@ export class ShoppingListComponent {
   ingredients : Ingredient [] = [new Ingredient("Salsa" , 20) , new Ingredient("Sugar" , 30)] ;
 
 
+  onAddedItem(addedIngredient : Ingredient){
+    this.ingredients.push(addedIngredient);
+  }
+
 
 }
