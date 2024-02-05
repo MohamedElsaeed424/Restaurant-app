@@ -21,7 +21,7 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a href="#">To Shopping List</a></li>
+                <li><a href="#" (click)="onMoveToShoppingList()">To Shopping List</a></li>
                 <li><a href="#">Edit Recipe</a></li>
                 <li><a href="#">Delete Recipe</a></li>
             </ul>
@@ -35,6 +35,11 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <p>Ingredients</p>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Ingredients:</p>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let ingredient of currentRecipe.ingredients">
+                {{ingredient.name}}-{{ingredient.amount}}
+            </li>
+        </ul>
     </div>
 </div>
