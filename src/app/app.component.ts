@@ -6,9 +6,9 @@ import { Component ,Input } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  currentPage : string  = 'recipes';
-  onSelectedPage(pageSelected : string){
-    this.currentPage =pageSelected ;
-  }
+  // currentPage : string  = 'recipes';
+  // onSelectedPage(pageSelected : string){
+  //   this.currentPage =pageSelected ;
+  // }
 
 }
