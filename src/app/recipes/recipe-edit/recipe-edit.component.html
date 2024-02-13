@@ -1,1 +1,75 @@
-<p>recipe-edit works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success" > Save</button> &nbsp;
+                        <button type="button" class="btn btn-danger">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div formGroupName="recipeData" class="form-group">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <div >
+                                <label for="rname">Name</label>
+                                <input type="text" id="rname" class="form-control" formControlName="rname">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <div>
+                                <label for="iurl">Image URL</label>
+                                <input type="text" id="iurl" class="form-control" formControlName="iurl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img 
+                        [src]="" 
+                        alt="" 
+                        class="img-responsitive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <div>
+                                <label for="desc">Describtion</label>
+                                <textarea 
+                                    type="text" 
+                                    id="desc" 
+                                    class="form-control" 
+                                    rows="6" 
+                                    formControlName="desc">
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <input  id="iname" type="text" class="form-control">
+                        </div>
+                        <div class="col-xs-2">
+                            <input id="amount" type="number" class="form-control" >
+                        </div>
+                        <div class="col-xs-2">
+                            <button class="btn btn-danger">X</button>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </form>
+    </div>
+</div>
