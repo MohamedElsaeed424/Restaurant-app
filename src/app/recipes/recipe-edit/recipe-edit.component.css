@@ -1,0 +1,17 @@
+input.ng-invalid.ng-touched ,
+text-area.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+img {
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove any extra space beneath the image */
+    border-radius: 8px; /* Add a rounded border for a soft look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    max-height: 300px;
+}
+
+/* Example styling for a responsive image container */
+.image-container {
+    max-width: 600px; /* Adjust the maximum width of the container as needed */
+}

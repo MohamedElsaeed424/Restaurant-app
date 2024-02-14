@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrl: './shopping-list.component.css' 
+  styleUrl: './shopping-list.component.css'
 })
 export class ShoppingListComponent implements OnInit , OnDestroy{
   ingredients : Ingredient [] ;

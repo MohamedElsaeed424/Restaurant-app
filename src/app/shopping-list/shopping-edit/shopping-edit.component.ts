@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-shopping-edit',
   templateUrl: './shopping-edit.component.html',
-  styleUrl: './shopping-edit.component.css'
+  styleUrl: './shopping-edit.component.css' 
 })
 export class ShoppingEditComponent implements OnInit , OnDestroy{
   @ViewChild('f' , {static : true}) slForm : NgForm ;
