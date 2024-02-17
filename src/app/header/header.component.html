@@ -18,7 +18,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown" appDropdown>
+                <li class="dropdown" appDropdown routerLinkActive="active">
                     <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage
                         <span class="caret"></span>
                     </a>
@@ -26,6 +26,9 @@
                         <li><a style="cursor: pointer;" (click)="onSaveRecipes()">Save Data</a></li>
                         <li><a style="cursor: pointer;" (click)="onFetchRecipes()">Fetch Data</a></li>
                     </ul>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="/auth"> Authenticate </a>
                 </li>
             </ul>
         </div>
