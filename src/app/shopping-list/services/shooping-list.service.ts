@@ -33,7 +33,7 @@ export class ShoopingListService {
 
    deleteIngredient(ingredientIndex : number){
       this.ingredients.splice(ingredientIndex ,  1) ;
-      this.changedIngriedient.next(this.ingredients) ;
+      this.changedIngriedient.next(this.ingredients.slice()) ;
    }
 
 }
