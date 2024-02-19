@@ -95,11 +95,4 @@ export class AuthComponent implements OnInit{
   //     this.closeSubc.unsubscribe()
   //   }
   // }
-
-
-
-
-
-
-
 }
