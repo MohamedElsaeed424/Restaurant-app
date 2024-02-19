@@ -27,8 +27,9 @@ export class ShoopingListService {
    }
 
    editIngredient(ingredientIndex : number , newName : string , newAmount : number){
-      this.ingredients[ingredientIndex].name = newName ;
-      this.ingredients[ingredientIndex].amount = newAmount ;
+      const newIngriedent = new Ingredient(newName , newAmount);
+      this.ingredients[ingredientIndex] = newIngriedent ;
+      this.changedIngriedient.next(this.ingredients.slice())
    }
 
    deleteIngredient(ingredientIndex : number){
