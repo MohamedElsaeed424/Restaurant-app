@@ -2,9 +2,10 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule ,ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
-import { ShoppingListComponent } from './shopping-list.component';
-import { ShoppingEditComponent } from './shopping-edit/shopping-edit.component';
+import { ShoppingListComponent } from '../shopping-list.component';
+import { ShoppingEditComponent } from '../shopping-edit/shopping-edit.component';
 import { ShoopingListRoutingModule } from "./shopping-list-routing.module";
+import { SharedModule } from "../../shared/modules/shared.module";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ShoopingListRoutingModule } from "./shopping-list-routing.module";
         RouterModule ,
         ReactiveFormsModule ,
         FormsModule ,
-        ShoopingListRoutingModule
+        ShoopingListRoutingModule ,
+        SharedModule
     ] 
 })
 export class ShoppingListModule {}

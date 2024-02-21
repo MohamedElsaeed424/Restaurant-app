@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { Observable, Subscription } from 'rxjs';
@@ -34,6 +34,7 @@ export class AuthComponent implements OnInit{
       'email' : new FormControl(null , [Validators.required ,  Validators.email]) ,
       'password' : new FormControl(null , [Validators.required ,Validators.minLength(6)])
     })
+  
   }
 
   onSwitch(){
