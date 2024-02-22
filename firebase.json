@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/restaurant-app",
+    "public": "dist\\restaurant-app\\browser",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -9,7 +9,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "dist\\restaurant-app\\browser"
       }
     ]
   }
