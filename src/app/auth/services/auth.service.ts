@@ -7,6 +7,7 @@ import { getAuth } from "firebase/auth";
 import { User } from "../models/user.model";
 import { ActivatedRoute, Router } from "@angular/router";
 import { JsonPipe } from "@angular/common";
+import { environment } from "../../../environments/environment";
 
 
 
@@ -20,7 +21,7 @@ export class AuthService {
 
     signUp(email : string , password : string){
         return this.http.post<AuthResponseData>(
-            'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAbV1_Gj85nkhkPYPnkzDLJbhGjrffTLeM' ,
+            'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='+environment.firebaseKey ,
             {email : email  , password : password  , returnSecureToken : true}  // needed for API for Firebase
         ).pipe(catchError(this.errorHandler) , tap(resData=>{
             this.AuthHandler(resData.email , resData.localid , resData.idToken , +resData.expiresIn) ;
@@ -29,7 +30,7 @@ export class AuthService {
 
     login(email : string , password : string){
         return this.http.post<AuthResponseData>(
-            'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAbV1_Gj85nkhkPYPnkzDLJbhGjrffTLeM',
+            'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key='+environment.firebaseKey,
             {email : email  , password : password  , returnSecureToken : true} 
         ).pipe(catchError(this.errorHandler) , tap(resData=>{
             this.AuthHandler(resData.email , resData.localid , resData.idToken , +resData.expiresIn) ;
