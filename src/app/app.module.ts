@@ -6,9 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule } from '@angular/common/http';
 import { RecipeModule } from './recipes/modules/recipes.module';
 import { ShoppingListModule } from './shopping-list/modules/shopping-list.module';
+import { AuthModule } from './auth/modules/auth.module';
 import { SharedModule } from './shared/modules/shared.module';
 import { CoreModule } from './core.module';
-import { AuthModule } from './auth/modules/auth.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +19,11 @@ import { AuthModule } from './auth/modules/auth.module';
     BrowserModule ,
     AppRoutingModule ,
     HttpClientModule ,
-    RecipeModule ,
-    ShoppingListModule ,
+    // RecipeModule ,   Lazy loading
+    // ShoppingListModule , Lazy loading
+    // AuthModule , Lazy loading
     SharedModule ,
     CoreModule ,
-    AuthModule
   ],
   bootstrap: [AppComponent]
 })

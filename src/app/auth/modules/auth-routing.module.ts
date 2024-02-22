@@ -4,12 +4,12 @@ import { AuthComponent } from "../auth.component";
 
 
 const AuthRoutes : Routes = [
-    {path : 'auth' , component : AuthComponent},
+    {path : '' , component : AuthComponent},
 ]
 
 @NgModule({
     imports :[
-        RouterModule.forRoot(AuthRoutes) 
+        RouterModule.forChild(AuthRoutes) 
     ] ,
     exports:[
         RouterModule
